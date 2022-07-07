@@ -37,13 +37,30 @@
 }
 
 .blogPost {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding-left: 10%;
   padding-right: 10%;
   padding-top: 5%;
+  justify-content: center;
+  border-bottom: 1px solid white;
 }
 
 .App-link {
   color: #61dafb;
+}
+
+.Inputs {
+  font-size: smaller;
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  border: dotted 1px white;
+}
+
+.Inputs div {
+  padding: 10px;
 }
 
 @keyframes App-logo-spin {
