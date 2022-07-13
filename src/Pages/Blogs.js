@@ -15,6 +15,7 @@ const BlogsPage = ({
   page,
   setPage,
 }) => {
+  //   console.log("blogs" + blogs);
   return (
     <div className="blogs-page">
       <h1>Blogs Page</h1>
@@ -60,6 +61,7 @@ const BlogsPage = ({
           </select>
           <br />
           <label>Filter Value: </label>
+
           <input
             placeholder="..."
             type="text"
@@ -109,38 +111,52 @@ const BlogPost = ({ blog }) => {
   return (
     <div className="blogPost">
       <br />
+
       <span>
-        <strong> Title: </strong> &nbsp;
-        {blog.title}
+        <p>
+          <strong> Title: </strong> &nbsp;
+          {blog.title}
+        </p>
       </span>
-      <p>
-        <span>
+
+      <span>
+        <p>
           <strong> Author: </strong> &nbsp;
           {blog.author}
-        </span>
-      </p>
-      <p>
-        <span>
+        </p>
+      </span>
+
+      <span>
+        <p>
           <strong>Category: </strong> &nbsp;
           {blog.category}
-        </span>
-      </p>
-      <p>{blog.text}</p>
+        </p>
+      </span>
+
+      <p className="TextBlock">{blog.text}</p>
       <p>
         <span>
-          <strong> Created At: </strong> &nbsp; {blog.createdAt}
+          <strong>
+            Created At: <br />
+          </strong>
+          &nbsp; {blog.createdAt}
         </span>
       </p>
       <p>
         <span>
-          <strong> Last Modified: </strong> &nbsp; {blog.lastModified}
+          <strong>
+            Last Modified: <br />
+          </strong>
+          &nbsp; {blog.lastModified}
         </span>
       </p>
-      <p>
-        <span>
+
+      <span>
+        <p>
           <strong> ID: </strong> &nbsp; {blog.id}
-        </span>
-      </p>
+        </p>
+      </span>
+
       <br />
     </div>
   );
