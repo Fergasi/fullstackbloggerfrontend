@@ -1,0 +1,51 @@
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  width: 50%;
+  background-color: rgb(128, 164, 231);
+  color: black;
+  border-radius: 10px;
+}
+
+.modal-header,
+.modal-footer {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-title {
+  margin: 0;
+}
+
+.modal-body {
+  font-size: 15px;
+  padding-top: 15px;
+  padding-left: 25px;
+  padding-right: 25px;
+  text-align: justify;
+  border-top: 1px solid rgb(0, 0, 0);
+  border-bottom: 1px solid rgb(0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-body > textarea {
+  max-width: 40vw;
+  width: 40vw;
+  min-height: 30vh;
+}

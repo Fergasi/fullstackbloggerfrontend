@@ -45,6 +45,13 @@ const App = () => {
     setAdminBlogsLoading(false);
     console.log(responseJSON);
   };
+  //function for fetching single blog to display in Admin modal
+  const fetchSingleBlog = async (blogId) => {
+    const url = `${urlEndpoint}/blogs/single-blog/${blogId}`;
+    const response = await fetch(url);
+    const responseJSON = await response.json();
+    return responseJSON;
+  };
 
   //useEffect for fetching the full blog list from blogs/all-blogs
   useEffect(() => {
@@ -110,6 +117,9 @@ const App = () => {
               <BlogManager
                 adminBlogList={adminBlogList.message}
                 deleteBlog={deleteBlog}
+                fetchSingleBlog={fetchSingleBlog}
+                urlEndpoint={urlEndpoint}
+                setAdminBlogsLoading={setAdminBlogsLoading}
               />
             }
           />
